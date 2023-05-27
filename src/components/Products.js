@@ -1,14 +1,14 @@
 import '../App.css';
 
-function HomePage() {
+function Products() {
     return (
         <div className="home-page">
             <header className="App-header">
                 <p>SOURCE MATERIAL</p>
-                <p>2023</p>
+                <p>PRODUCTS</p>
             </header>
         </div>
     )
 }
 
-export default HomePage
+export default Products

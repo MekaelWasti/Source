@@ -1,7 +1,13 @@
+:root {
+  --background-color: #111111
+}
+
 * {
   font-family: "Roboto";
   font-weight: 900;
-  letter-spacing: 1em;
+  letter-spacing: 1.8vw;
+  user-select: none;
+  background-color: var(--background-color);
 }
 
 .App {
@@ -20,8 +26,8 @@
 }
 
 .App-header {
-  background-color: #111111;
-  min-height: 100vh;
+  background-color: var(--background-color);
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,4 +47,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Nav Bar */
+nav {
+  background-color: var(--background-color);
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 0 0 0 0;
+  padding-left: 1vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.3vw;
+}
+
+nav li {
+  font-size: 2em;
+   padding-bottom: 16px;
 }
