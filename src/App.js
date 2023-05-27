@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
@@ -9,10 +10,17 @@ import Policy from "./components/Policy";
 import logo from "./assets/logo.jpg";
 
 function App() {
+
+  const [isNavBarCollapsed, setIsNavBarCollapsed] = useState(true);
+
+  const toggleNavBar = () => {
+    setIsNavBarCollapsed(!isNavBarCollapsed);
+  };
+
   return (
     <Router>
       <div>
-        <nav>
+        <nav className={`nav-bar ${isNavBarCollapsed ? "collapsed" : "open"}`}>
           <ul>
             {/* Logo */}
             <li>
@@ -22,7 +30,7 @@ function App() {
                     <circle cx="50" cy="50" r="30" />
                   </clipPath>
                 </defs>
-                <Link to="/">
+                <Link to="/" onClick={toggleNavBar}>
                   <image
                     href={logo}
                     x="20"
@@ -35,6 +43,8 @@ function App() {
               </svg>
             </li>
             {/* Logo */}
+            {!isNavBarCollapsed && (
+              <>
             <li>
               <Link to="/">HOME</Link>
             </li>
@@ -47,6 +57,8 @@ function App() {
             <li>
               <Link to="/policy">POLICY</Link>
             </li>
+            </>
+            )}
           </ul>
         </nav>
 
