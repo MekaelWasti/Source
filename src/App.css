@@ -7,7 +7,7 @@
   font-weight: 900;
   letter-spacing: 1.8vw;
   user-select: none;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
 }
 
 .App {
@@ -53,6 +53,10 @@
 nav {
   background-color: var(--background-color);
   position: fixed;
+}
+
+nav > * {
+  /* background-color: #61dafb; */
 }
 
 nav ul {
